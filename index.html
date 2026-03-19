@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOVA BITES | Cosmic Cannabis Confections</title>
     <meta name="description" content="Premium cannabis-infused cookies and gummies. Lab-tested, precisely dosed, deliciously elevated.">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -62,213 +62,50 @@
             }
         }
     </script>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Comic+Neue:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+
     <style>
-    * {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    
-    html, body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0a0a0f;
-        color: #f8fafc;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
-    
-    .space-font {
-        font-family: 'Space Grotesk', system-ui, sans-serif;
-    }
-    
-    .comic-font {
-        font-family: 'Comic Neue', cursive;
-    }
-    
-    .gradient-text {
-        background: linear-gradient(90deg, #7c3aed, #ec4899, #06b6d4);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        background-size: 200% auto;
-        animation: gradient 8s ease infinite;
-    }
-    
-    @keyframes gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    
-    .glass-effect {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .cookie-texture {
-        background-image: url('http://static.photos/food/1200x630/45');
-        background-size: cover;
-        background-position: center;
-        background-blend-mode: overlay;
-    }
-    
-    .gummy-texture {
-        background-image: url('http://static.photos/food/1200x630/46');
-        background-size: cover;
-        background-position: center;
-        background-blend-mode: overlay;
-    }
-    
-    .cursor-particle {
-        position: fixed;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        mix-blend-mode: screen;
-    }
-    
-    /* Morphing background adjustments for mobile */
-    .morphing-bg {
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(236, 72, 153, 0.05) 100%);
-        filter: blur(60px);
-        animation: morph 8s ease-in-out infinite;
-        z-index: -1;
-    }
-
-    /* Responsive offsets to prevent horizontal scroll */
-    .morphing-bg.left {
-        left: -24px;
-    }
-    @media(min-width: 768px){
-        .morphing-bg.left {
-            left: -160px; /* md:-left-40 */
-        }
-    }
-
-    .morphing-bg.right {
-        right: -24px;
-    }
-    @media(min-width: 768px){
-        .morphing-bg.right {
-            right: -160px; /* md:-right-40 */
-        }
-    }
-
-    .scroll-indicator {
-        position: relative;
-        width: 2px;
-        height: 60px;
-        background: linear-gradient(to bottom, #7c3aed, transparent);
-        margin: 0 auto;
-    }
-    
-    .scroll-indicator::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -3px;
-        width: 8px;
-        height: 8px;
-        background-color: #7c3aed;
-        border-radius: 50%;
-        animation: scroll-bounce 2s ease-in-out infinite;
-    }
-    
-    @keyframes scroll-bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(30px); }
-    }
-    
-    .product-card {
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        max-width: 100%; /* Prevent cards from exceeding mobile width */
-    }
-    
-    .product-card:hover {
-        transform: translateY(-10px);
-    }
-    
-    .squishy-btn {
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    
-    .squishy-btn:active {
-        transform: scale(0.95);
-    }
-    
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
-    
-    ::-webkit-scrollbar-track {
-        background: #0a0a0f;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        background: linear-gradient(to bottom, #7c3aed, #ec4899);
-        border-radius: 4px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(to bottom, #8b5cf6, #f472b6);
-    }
-    
-    .selection-color {
-        background-color: rgba(124, 58, 237, 0.3);
-    }
-    
-    ::selection {
-        background-color: rgba(124, 58, 237, 0.3);
-    }
-</style>
-
+        * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        html, body { font-family: 'Inter', sans-serif; background-color: #0a0a0f; color: #f8fafc; overflow-x: hidden; }
+        .space-font { font-family: 'Space Grotesk', system-ui, sans-serif; }
+        .comic-font { font-family: 'Comic Neue', cursive; }
+        .gradient-text { background: linear-gradient(90deg, #7c3aed, #ec4899, #06b6d4); -webkit-background-clip: text; color: transparent; background-size: 200% auto; animation: gradient 8s ease infinite; }
+        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .glass-effect { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.1); }
+        .product-card { max-width: 100%; transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275); }
+        .product-card:hover { transform: translateY(-10px); }
+        .squishy-btn { transition: all 0.3s cubic-bezier(0.175,0.885,0.32,1.275); }
+        .squishy-btn:active { transform: scale(0.95); }
+    </style>
 </head>
+
 <body class="bg-cosmic text-starlight overflow-x-hidden">
-    <!-- Cursor particles -->
-    <div id="cursor-particles"></div>
-    
-    <!-- Morphing background elements -->
-    <div class="morphing-bg top-0 -left-40"></div>
-    <div class="morphing-bg bottom-0 -right-40"></div>
-    
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-effect py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="space-font text-2xl font-bold">
                 <span class="gradient-text">NOVA</span> <span class="text-starlight">BITES</span>
             </div>
-            
             <div class="hidden md:flex space-x-8">
                 <a href="#products" class="hover:text-nova transition-colors space-font">Products</a>
                 <a href="#experience" class="hover:text-nova transition-colors space-font">Experience</a>
                 <a href="#story" class="hover:text-nova transition-colors space-font">Our Story</a>
                 <a href="#lab" class="hover:text-nova transition-colors space-font">Lab Results</a>
             </div>
-            
             <div class="flex items-center space-x-4">
                 <button id="cart-btn" class="relative squishy-btn">
                     <i data-lucide="shopping-cart" class="w-6 h-6 hover:text-nova transition-colors"></i>
                     <span id="cart-count" class="absolute -top-2 -right-2 bg-psychedelic text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
                 </button>
-                
                 <button id="menu-btn" class="md:hidden squishy-btn">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
-        
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full glass-effect py-4 hidden">
             <div class="container mx-auto px-6 flex flex-col space-y-4">
@@ -279,408 +116,64 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center relative pt-16">
-        <div class="container mx-auto px-6 text-center">
-            <div class="inline-block px-4 py-2 rounded-full glass-effect mb-8">
-                <span class="text-sm space-font">🚀 Elevate Your Experience</span>
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-bold space-font mb-6">
-                <span class="gradient-text">Cosmic</span>
-                <span class="block">Confections</span>
-            </h1>
-            
-            <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-10 opacity-90">
+    <section class="min-h-screen flex items-center justify-center relative pt-16 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold space-font mb-6"><span class="gradient-text">Cosmic</span> <span class="block">Confections</span></h1>
+            <p class="text-xl md:text-2xl max-w-md mx-auto mb-10 opacity-90">
                 Premium cannabis-infused cookies & gummies that take your taste buds 
                 <span class="comic-font text-cookie font-bold">and consciousness</span> 
                 on an intergalactic journey.
             </p>
-            
             <div class="flex flex-col md:flex-row gap-4 justify-center mb-16">
-                <a href="#products" class="squishy-btn px-8 py-4 bg-nova text-starlight rounded-full font-bold space-font hover:bg-opacity-90 transition-all">
-                    Explore Products
-                </a>
-                <a href="#experience" class="squishy-btn px-8 py-4 glass-effect text-starlight rounded-full font-bold space-font hover:bg-white hover:bg-opacity-10 transition-all">
-                    Take the Quiz
-                </a>
+                <a href="#products" class="squishy-btn px-8 py-4 bg-nova text-starlight rounded-full font-bold space-font hover:bg-opacity-90 transition-all">Explore Products</a>
+                <a href="#experience" class="squishy-btn px-8 py-4 glass-effect text-starlight rounded-full font-bold space-font hover:bg-white hover:bg-opacity-10 transition-all">Take the Quiz</a>
             </div>
-            
-            <div class="scroll-indicator"></div>
         </div>
     </section>
-    
+
     <!-- Products Section -->
     <section id="products" class="py-20 px-6">
         <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold space-font text-center mb-4">
-                Our <span class="gradient-text">Cosmic</span> Collection
-            </h2>
-            <p class="text-xl text-center max-w-2xl mx-auto mb-12 opacity-80">
-                Each product is lab-tested, precisely dosed, and crafted for a 
-                <span class="comic-font text-gummy">smooth, consistent</span> experience.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <!-- Product Card 1 -->
-                <div class="product-card glass-effect rounded-2xl p-6 cursor-pointer group">
-                    <div class="relative h-64 mb-6 rounded-xl overflow-hidden cookie-texture">
-                        <div class="absolute inset-0 bg-gradient-to-t from-cosmic via-transparent to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-nova text-xs font-bold px-3 py-1 rounded-full">
-                            COOKIES
-                        </div>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold space-font mb-2">Galactic Chocolate Chip</h3>
-                    <p class="opacity-80 mb-4">Rich dark chocolate with cosmic cookie dough and 10mg THC per cookie.</p>
-                    
+            <h2 class="text-4xl md:text-5xl font-bold space-font text-center mb-4">Our <span class="gradient-text">Cosmic</span> Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Product 1 -->
+                <div class="product-card glass-effect rounded-2xl p-4">
+                    <div class="relative h-56 mb-4 rounded-xl overflow-hidden bg-cookie"></div>
+                    <h3 class="text-xl font-bold space-font mb-2">Galactic Chocolate Chip</h3>
+                    <p class="opacity-80 mb-4 text-sm">Rich dark chocolate with cosmic cookie dough and 10mg THC per cookie.</p>
                     <div class="flex justify-between items-center">
-                        <div>
-                            <span class="text-2xl font-bold text-cookie">$32</span>
-                            <span class="text-sm opacity-70">/ 4 cookies</span>
-                        </div>
-                        <button class="add-to-cart squishy-btn bg-nova text-starlight px-4 py-2 rounded-full font-bold hover:bg-opacity-90 transition-all" data-product="Galactic Chocolate Chip" data-price="32">
-                            Add to Cart
-                        </button>
+                        <span class="text-lg font-bold text-cookie">$32</span>
+                        <button class="add-to-cart squishy-btn bg-nova text-starlight px-4 py-2 rounded-full text-sm font-bold">Add to Cart</button>
                     </div>
                 </div>
-                
-                <!-- Product Card 2 -->
-                <div class="product-card glass-effect rounded-2xl p-6 cursor-pointer group">
-                    <div class="relative h-64 mb-6 rounded-xl overflow-hidden gummy-texture">
-                        <div class="absolute inset-0 bg-gradient-to-t from-cosmic via-transparent to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-gummy text-xs font-bold px-3 py-1 rounded-full">
-                            GUMMIES
-                        </div>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold space-font mb-2">Psychedelic Peach Rings</h3>
-                    <p class="opacity-80 mb-4">Juicy peach gummies with 5mg THC each. A fruity journey to the cosmos.</p>
-                    
+                <!-- Product 2 -->
+                <div class="product-card glass-effect rounded-2xl p-4">
+                    <div class="relative h-56 mb-4 rounded-xl overflow-hidden bg-gummy"></div>
+                    <h3 class="text-xl font-bold space-font mb-2">Psychedelic Peach Rings</h3>
+                    <p class="opacity-80 mb-4 text-sm">Juicy peach gummies with 5mg THC each. A fruity journey to the cosmos.</p>
                     <div class="flex justify-between items-center">
-                        <div>
-                            <span class="text-2xl font-bold text-gummy">$28</span>
-                            <span class="text-sm opacity-70">/ 10 gummies</span>
-                        </div>
-                        <button class="add-to-cart squishy-btn bg-gummy text-starlight px-4 py-2 rounded-full font-bold hover:bg-opacity-90 transition-all" data-product="Psychedelic Peach Rings" data-price="28">
-                            Add to Cart
-                        </button>
+                        <span class="text-lg font-bold text-gummy">$28</span>
+                        <button class="add-to-cart squishy-btn bg-gummy text-starlight px-4 py-2 rounded-full text-sm font-bold">Add to Cart</button>
                     </div>
                 </div>
-                
-                <!-- Product Card 3 -->
-                <div class="product-card glass-effect rounded-2xl p-6 cursor-pointer group">
-                    <div class="relative h-64 mb-6 rounded-xl overflow-hidden cookie-texture">
-                        <div class="absolute inset-0 bg-gradient-to-t from-cosmic via-transparent to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-psychedelic text-xs font-bold px-3 py-1 rounded-full">
-                            COOKIES
-                        </div>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold space-font mb-2">Nova Double Fudge</h3>
-                    <p class="opacity-80 mb-4">Double the chocolate, double the bliss. 15mg THC per indulgent cookie.</p>
-                    
+                <!-- Product 3 -->
+                <div class="product-card glass-effect rounded-2xl p-4">
+                    <div class="relative h-56 mb-4 rounded-xl overflow-hidden bg-psychedelic"></div>
+                    <h3 class="text-xl font-bold space-font mb-2">Nova Double Fudge</h3>
+                    <p class="opacity-80 mb-4 text-sm">Double the chocolate, double the bliss. 15mg THC per indulgent cookie.</p>
                     <div class="flex justify-between items-center">
-                        <div>
-                            <span class="text-2xl font-bold text-cookie">$36</span>
-                            <span class="text-sm opacity-70">/ 4 cookies</span>
-                        </div>
-                        <button class="add-to-cart squishy-btn bg-psychedelic text-starlight px-4 py-2 rounded-full font-bold hover:bg-opacity-90 transition-all" data-product="Nova Double Fudge" data-price="36">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center">
-                <a href="#" class="inline-block squishy-btn glass-effect px-8 py-4 rounded-full font-bold space-font hover:bg-white hover:bg-opacity-10 transition-all">
-                    View All Products
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Experience Quiz -->
-    <section id="experience" class="py-20 px-6 bg-space-black">
-        <div class="container mx-auto">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-bold space-font text-center mb-4">
-                    Find Your <span class="gradient-text">Cosmic Match</span>
-                </h2>
-                <p class="text-xl text-center mb-12 opacity-80">
-                    Take our playful quiz to discover which cosmic confection aligns with your desired experience.
-                </p>
-                
-                <div class="glass-effect rounded-2xl p-8">
-                    <div id="quiz-container">
-                        <div id="quiz-step-1" class="quiz-step">
-                            <h3 class="text-2xl font-bold space-font mb-6">What's your vibe today?</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <button class="quiz-option squishy-btn glass-effect p-6 rounded-xl text-left hover:bg-white hover:bg-opacity-10 transition-all" data-next="2" data-answer="chill">
-                                    <div class="text-3xl mb-2">🌌</div>
-                                    <h4 class="text-xl font-bold space-font mb-2">Chill & Cosmic</h4>
-                                    <p class="opacity-80">Just want to relax and float through the universe</p>
-                                </button>
-                                <button class="quiz-option squishy-btn glass-effect p-6 rounded-xl text-left hover:bg-white hover:bg-opacity-10 transition-all" data-next="2" data-answer="creative">
-                                    <div class="text-3xl mb-2">🎨</div>
-                                    <h4 class="text-xl font-bold space-font mb-2">Creative & Expansive</h4>
-                                    <p class="opacity-80">Looking for inspiration and mind expansion</p>
-                                </button>
-                                <button class="quiz-option squishy-btn glass-effect p-6 rounded-xl text-left hover:bg-white hover:bg-opacity-10 transition-all" data-next="2" data-answer="fun">
-                                    <div class="text-3xl mb-2">🤪</div>
-                                    <h4 class="text-xl font-bold space-font mb-2">Fun & Playful</h4>
-                                    <p class="opacity-80">Ready for laughter and good times with friends</p>
-                                </button>
-                                <button class="quiz-option squishy-btn glass-effect p-6 rounded-xl text-left hover:bg-white hover:bg-opacity-10 transition-all" data-next="2" data-answer="focused">
-                                    <div class="text-3xl mb-2">🔍</div>
-                                    <h4 class="text-xl font-bold space-font mb-2">Focused & Mindful</h4>
-                                    <p class="opacity-80">Seeking clarity and presence in the moment</p>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div id="quiz-step-2" class="quiz-step hidden">
-                            <h3 class="text-2xl font-bold space-font mb-6">Sweet or savory?</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <button class="quiz-option squishy-btn glass-effect p-6 rounded-xl text-left hover:bg-white hover:bg-opacity-10 transition-all" data-next="result" data-answer="cookie">
-                                    <div class="text-3xl mb-2">🍪</div>
-                                    <h4 class="text-xl font-bold space-font mb-2">Cookie Creature</h4>
-                                    <p class="opacity-80">Warm, baked, chocolatey goodness</p>
-                                </button>
-                                <button class="quiz-option squishy-btn glass-effect p-6 rounded-xl text-left hover:bg-white hover:bg-opacity-10 transition-all" data-next="result" data-answer="gummy">
-                                    <div class="text-3xl mb-2">🍬</div>
-                                    <h4 class="text-xl font-bold space-font mb-2">Gummy Galaxy Explorer</h4>
-                                    <p class="opacity-80">Fruity, chewy, burst of flavor</p>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div id="quiz-result" class="hidden">
-                            <div class="text-center py-8">
-                                <div class="text-6xl mb-6">✨</div>
-                                <h3 class="text-3xl font-bold space-font mb-4">Your Cosmic Match is...</h3>
-                                <div id="result-product" class="text-4xl font-bold gradient-text mb-6">Galactic Chocolate Chip</div>
-                                <p id="result-description" class="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
-                                    Perfect for your chill cosmic vibe! These cookies will help you float through the universe with delicious chocolatey bliss.
-                                </p>
-                                <button id="result-button" class="squishy-btn bg-nova text-starlight px-8 py-4 rounded-full font-bold space-font hover:bg-opacity-90 transition-all">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
+                        <span class="text-lg font-bold text-cookie">$36</span>
+                        <button class="add-to-cart squishy-btn bg-psychedelic text-starlight px-4 py-2 rounded-full text-sm font-bold">Add to Cart</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Brand Story -->
-    <section id="story" class="py-20 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold space-font text-center mb-12">
-                Our <span class="gradient-text">Cosmic</span> Origin
-            </h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <div class="text-6xl mb-6">🚀</div>
-                    <h3 class="text-3xl font-bold space-font mb-6">
-                        From Earthly Ingredients to Cosmic Experiences
-                    </h3>
-                    <p class="text-lg opacity-80 mb-6">
-                        NOVA BITES was founded by a pastry chef and a cannabis scientist who shared a vision: 
-                        to create edibles that were not just effective, but exceptional.
-                    </p>
-                    <p class="text-lg opacity-80 mb-6">
-                        We spent two years perfecting our recipes, balancing flavor profiles with precise cannabinoid ratios, 
-                        and developing a production process that ensures every cookie and gummy delivers a consistent, 
-                        smooth experience.
-                    </p>
-                    <p class="text-lg opacity-80">
-                        Our name reflects our mission: to offer a <span class="comic-font text-cookie font-bold">"nova"</span> 
-                        — an explosion of flavor and experience — in every bite.
-                    </p>
-                </div>
-                
-                <div class="relative">
-                    <div class="morphing-bg w-full h-96"></div>
-                    <div class="glass-effect rounded-2xl p-8 relative z-10">
-                        <h4 class="text-2xl font-bold space-font mb-4">Why Choose Nova Bites?</h4>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-gummy mr-3 flex-shrink-0"></i>
-                                <span><strong class="space-font">Lab-Tested Precision:</strong> Every batch is third-party tested for potency and purity</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-gummy mr-3 flex-shrink-0"></i>
-                                <span><strong class="space-font">Chef-Crafted Recipes:</strong> Developed by award-winning pastry chefs</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-gummy mr-3 flex-shrink-0"></i>
-                                <span><strong class="space-font">Consistent Experience:</strong> Precise dosing means you know exactly what to expect</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-gummy mr-3 flex-shrink-0"></i>
-                                <span><strong class="space-font">Sustainable Packaging:</strong> Compostable materials that look out-of-this-world</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Lab Results -->
-    <section id="lab" class="py-20 px-6 bg-space-black">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold space-font text-center mb-4">
-                Lab <span class="gradient-text">Tested</span>, Cosmic <span class="gradient-text">Trusted</span>
-            </h2>
-            <p class="text-xl text-center max-w-2xl mx-auto mb-12 opacity-80">
-                Transparency is at the core of our cosmic mission. Every batch is tested for potency, purity, and safety.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div class="glass-effect rounded-2xl p-8 text-center">
-                    <div class="text-5xl mb-4">🔬</div>
-                    <h3 class="text-2xl font-bold space-font mb-4">Third-Party Verified</h3>
-                    <p class="opacity-80">All products tested by independent, certified laboratories</p>
-                </div>
-                
-                <div class="glass-effect rounded-2xl p-8 text-center">
-                    <div class="text-5xl mb-4">📊</div>
-                    <h3 class="text-2xl font-bold space-font mb-4">Precise Dosing</h3>
-                    <p class="opacity-80">Consistent potency within ±5% of labeled THC content</p>
-                </div>
-                
-                <div class="glass-effect rounded-2xl p-8 text-center">
-                    <div class="text-5xl mb-4">🌱</div>
-                    <h3 class="text-2xl font-bold space-font mb-4">Purity Guaranteed</h3>
-                    <p class="opacity-80">Free from pesticides, heavy metals, and microbial contaminants</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <button id="view-labs" class="squishy-btn glass-effect px-8 py-4 rounded-full font-bold space-font hover:bg-white hover:bg-opacity-10 transition-all">
-                    View Full Lab Reports
-                </button>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Cart Modal -->
-    <div id="cart-modal" class="fixed inset-0 z-50 hidden">
-        <div class="absolute inset-0 bg-black bg-opacity-70" id="cart-overlay"></div>
-        <div class="absolute right-0 top-0 h-full w-full md:w-1/3 bg-cosmic glass-effect p-6 transform transition-transform translate-x-full">
-            <div class="flex justify-between items-center mb-8">
-                <h3 class="text-2xl font-bold space-font">Your Cosmic Cart</h3>
-                <button id="close-cart" class="squishy-btn">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-            
-            <div id="cart-items" class="mb-8">
-                <!-- Cart items will be dynamically added here -->
-                <p id="empty-cart-message" class="text-center py-8 opacity-70">Your cart is empty. Add some cosmic treats!</p>
-            </div>
-            
-            <div class="border-t border-white border-opacity-10 pt-6">
-                <div class="flex justify-between mb-4">
-                    <span class="opacity-80">Subtotal</span>
-                    <span id="cart-subtotal" class="font-bold">$0</span>
-                </div>
-                <button class="w-full squishy-btn bg-nova text-starlight py-4 rounded-full font-bold space-font hover:bg-opacity-90 transition-all">
-                    Checkout
-                </button>
-                <p class="text-center text-sm opacity-60 mt-4">
-                    Must be 21+ to purchase. Available in legal states only.
-                </p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer class="py-12 px-6 glass-effect">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="space-font text-2xl font-bold mb-4">
-                        <span class="gradient-text">NOVA</span> <span class="text-starlight">BITES</span>
-                    </div>
-                    <p class="opacity-80">
-                        Premium cannabis-infused cookies and gummies for cosmic experiences.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold space-font mb-4">Products</h4>
-                    <ul class="space-y-2 opacity-80">
-                        <li><a href="#" class="hover:text-nova transition-colors">Cookies</a></li>
-                        <li><a href="#" class="hover:text-nova transition-colors">Gummies</a></li>
-                        <li><a href="#" class="hover:text-nova transition-colors">New Arrivals</a></li>
-                        <li><a href="#" class="hover:text-nova transition-colors">Best Sellers</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold space-font mb-4">Learn</h4>
-                    <ul class="space-y-2 opacity-80">
-                        <li><a href="#" class="hover:text-nova transition-colors">Dosing Guide</a></li>
-                        <li><a href="#" class="hover:text-nova transition-colors">Lab Results</a></li>
-                        <li><a href="#" class="hover:text-nova transition-colors">FAQ</a></li>
-                        <li><a href="#" class="hover:text-nova transition-colors">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold space-font mb-4">Connect</h4>
-                    <ul class="space-y-2 opacity-80">
-                        <li><a href="#" class="hover:text-nova transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="hover:text-nova transition-colors">Wholesale</a></li>
-                        <li><a href="#" class="hover:text-nova transition-colors">Careers</a></li>
-                        <div class="flex space-x-4 mt-4">
-                            <a href="#" class="hover:text-nova transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                            <a href="#" class="hover:text-nova transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                            <a href="#" class="hover:text-nova transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-white border-opacity-10 pt-8 text-center opacity-70 text-sm">
-                <p class="mb-2">© 2023 NOVA BITES. For adults 21+ only. Available where cannabis is legally sold.</p>
-                <p>These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Age Verification Modal -->
-    <div id="age-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
-        <div class="absolute inset-0 bg-black bg-opacity-90"></div>
-        <div class="relative glass-effect rounded-2xl p-8 max-w-md mx-4">
-            <div class="text-center">
-                <div class="text-5xl mb-6">🚀</div>
-                <h3 class="text-3xl font-bold space-font mb-4">Welcome to NOVA BITES</h3>
-                <p class="opacity-80 mb-8">
-                    You must be 21 years or older to enter this website. By entering, you confirm that you are of legal age in your state to purchase cannabis products.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button id="confirm-age" class="squishy-btn bg-nova text-starlight px-8 py-4 rounded-full font-bold space-font hover:bg-opacity-90 transition-all">
-                        I am 21+
-                    </button>
-                    <button id="exit-site" class="squishy-btn glass-effect px-8 py-4 rounded-full font-bold space-font hover:bg-white hover:bg-opacity-10 transition-all">
-                        Exit Site
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
