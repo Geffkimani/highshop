@@ -70,148 +70,170 @@
     
     <!-- Custom CSS -->
     <style>
-        * {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    html, body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0f;
+        color: #f8fafc;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    
+    .space-font {
+        font-family: 'Space Grotesk', system-ui, sans-serif;
+    }
+    
+    .comic-font {
+        font-family: 'Comic Neue', cursive;
+    }
+    
+    .gradient-text {
+        background: linear-gradient(90deg, #7c3aed, #ec4899, #06b6d4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 200% auto;
+        animation: gradient 8s ease infinite;
+    }
+    
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .cookie-texture {
+        background-image: url('http://static.photos/food/1200x630/45');
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+    }
+    
+    .gummy-texture {
+        background-image: url('http://static.photos/food/1200x630/46');
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+    }
+    
+    .cursor-particle {
+        position: fixed;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: screen;
+    }
+    
+    /* Morphing background adjustments for mobile */
+    .morphing-bg {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(236, 72, 153, 0.05) 100%);
+        filter: blur(60px);
+        animation: morph 8s ease-in-out infinite;
+        z-index: -1;
+    }
+
+    /* Responsive offsets to prevent horizontal scroll */
+    .morphing-bg.left {
+        left: -24px;
+    }
+    @media(min-width: 768px){
+        .morphing-bg.left {
+            left: -160px; /* md:-left-40 */
         }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0f;
-            color: #f8fafc;
-            overflow-x: hidden;
+    }
+
+    .morphing-bg.right {
+        right: -24px;
+    }
+    @media(min-width: 768px){
+        .morphing-bg.right {
+            right: -160px; /* md:-right-40 */
         }
-        
-        .space-font {
-            font-family: 'Space Grotesk', system-ui, sans-serif;
-        }
-        
-        .comic-font {
-            font-family: 'Comic Neue', cursive;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(90deg, #7c3aed, #ec4899, #06b6d4);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            background-size: 200% auto;
-            animation: gradient 8s ease infinite;
-        }
-        
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .cookie-texture {
-            background-image: url('http://static.photos/food/1200x630/45');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
-        }
-        
-        .gummy-texture {
-            background-image: url('http://static.photos/food/1200x630/46');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
-        }
-        
-        .cursor-particle {
-            position: fixed;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: screen;
-        }
-        
-        .morphing-bg {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(236, 72, 153, 0.05) 100%);
-            filter: blur(60px);
-            animation: morph 8s ease-in-out infinite;
-            z-index: -1;
-        }
-        
-        .scroll-indicator {
-            position: relative;
-            width: 2px;
-            height: 60px;
-            background: linear-gradient(to bottom, #7c3aed, transparent);
-            margin: 0 auto;
-        }
-        
-        .scroll-indicator::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -3px;
-            width: 8px;
-            height: 8px;
-            background-color: #7c3aed;
-            border-radius: 50%;
-            animation: scroll-bounce 2s ease-in-out infinite;
-        }
-        
-        @keyframes scroll-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(30px); }
-        }
-        
-        .product-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .product-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .squishy-btn {
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .squishy-btn:active {
-            transform: scale(0.95);
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #0a0a0f;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #7c3aed, #ec4899);
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #8b5cf6, #f472b6);
-        }
-        
-        .selection-color {
-            background-color: rgba(124, 58, 237, 0.3);
-        }
-        
-        ::selection {
-            background-color: rgba(124, 58, 237, 0.3);
-        }
-    </style>
+    }
+
+    .scroll-indicator {
+        position: relative;
+        width: 2px;
+        height: 60px;
+        background: linear-gradient(to bottom, #7c3aed, transparent);
+        margin: 0 auto;
+    }
+    
+    .scroll-indicator::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -3px;
+        width: 8px;
+        height: 8px;
+        background-color: #7c3aed;
+        border-radius: 50%;
+        animation: scroll-bounce 2s ease-in-out infinite;
+    }
+    
+    @keyframes scroll-bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(30px); }
+    }
+    
+    .product-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        max-width: 100%; /* Prevent cards from exceeding mobile width */
+    }
+    
+    .product-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .squishy-btn {
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .squishy-btn:active {
+        transform: scale(0.95);
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #0a0a0f;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #7c3aed, #ec4899);
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #8b5cf6, #f472b6);
+    }
+    
+    .selection-color {
+        background-color: rgba(124, 58, 237, 0.3);
+    }
+    
+    ::selection {
+        background-color: rgba(124, 58, 237, 0.3);
+    }
+</style>
+
 </head>
 <body class="bg-cosmic text-starlight overflow-x-hidden">
     <!-- Cursor particles -->
